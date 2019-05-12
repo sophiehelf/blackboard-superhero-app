@@ -6,7 +6,9 @@ class SuperheroSearch extends React.Component {
         super(props)
 
         this.state = {
-            selectedSuper: ""
+            selectedSuper: "",
+            superAttributes: {},
+            isSuper: undefined
         }
     }
 
@@ -14,7 +16,7 @@ class SuperheroSearch extends React.Component {
         console.log("Component has mounted")
     }
 
-    handleChange = (e) => {
+    handleBlur = (e) => {
         this.setState({selectedSuper: e.target.value})
     }
  
@@ -23,25 +25,35 @@ class SuperheroSearch extends React.Component {
         fetch(`https://superheroapi.com/api/10161612492070527/search/${this.state.selectedSuper}`)
         .then(res => res.json())
         .then(jsonResponse => {
-            this.setState({selectedSuper: jsonResponse.results[0].name})
+            this.setState({
+                selectedSuper: jsonResponse.results[0].name,
+                superAttributes: jsonResponse.results[0].powerstats,
+                isSuper: jsonResponse.results[0].biography.alignment
+            }, () => console.log(this.state.isSuper))
         }).catch(error => {
-            console.log(error)
+            console.log("there has been an error :(")
         })
     }
 
     render() {
+
+
         return (
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>
                         Search a Superhero
                         <br />
-                        <input type="text" name="name" onChange={this.handleChange}/>
+                        <input type="text" name="name" onBlur={this.handleBlur}/>
                     </label>
                     <input type="submit" value="Search" />
                 </form>
 
-                <SuperheroResults selectedSuper={this.state.selectedSuper}/>
+                <SuperheroResults 
+                superAttributes={this.state.superAttributes}
+                selectedSuper={this.state.selectedSuper}
+                isSuper={this.props.isSuper}/>
+
             </div>
         )
     }
