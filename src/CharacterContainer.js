@@ -1,7 +1,8 @@
 import React from 'react'
+import SuperheroSearch from './SuperheroSearch.js'
 
 function CharacterContainer(props) {
-    return <p>is this working</p>
+    return <SuperheroSearch />
 }
 
 export default CharacterContainer
