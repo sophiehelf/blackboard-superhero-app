@@ -1,7 +1,12 @@
 import React from 'react'
 
 function SuperheroResults(props) {
-    return <p>hi</p>
+    return (
+        <div>
+            
+            {props.selectedSuper}
+        </div>
+    )
 }
 
 export default SuperheroResults
