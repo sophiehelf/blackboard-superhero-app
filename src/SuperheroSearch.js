@@ -5,7 +5,7 @@ class SuperheroSearch extends React.Component {
         super(props)
 
         this.state = {
-            superheroes: [],
+            selectedSuper: "",
             superheroStats: {},
             validationError: ""
         }
@@ -13,17 +13,27 @@ class SuperheroSearch extends React.Component {
 
     componentDidMount() {
 
-        fetch('https://superheroapi.com/api/10161612492070527/1')
+        fetch('https://superheroapi.com/api/10161612492070527/all.json')
         .then(res => res.json())
         .then(jsonResponse => {
             console.log(jsonResponse)
         })
     }
 
+    handleOnSubmit = (e) =>{
+        e.preventDefault() 
+    }
+
     render() {
         return (
             <div>
-                <select></select>
+                <form>
+                    <label>
+                        Search a Superhero
+                        <input type="text" name="name" />
+                    </label>
+                    <input type="submit" value="Search" />
+                </form>
             </div>
         )
     }
