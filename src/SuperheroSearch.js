@@ -8,7 +8,7 @@ class SuperheroSearch extends React.Component {
         this.state = {
             selectedSuper: "",
             superAttributes: {},
-            isSuper: undefined
+            isSuper: ''
         }
     }
 
@@ -52,7 +52,7 @@ class SuperheroSearch extends React.Component {
                 <SuperheroResults 
                 superAttributes={this.state.superAttributes}
                 selectedSuper={this.state.selectedSuper}
-                isSuper={this.props.isSuper}/>
+                isSuper={this.state.isSuper}/>
 
             </div>
         )

@@ -2,13 +2,19 @@ import React from 'react'
 
 function SuperheroResults(props) {
 
-   return (
-      <div>
-      {props.selectedSuper} <br />
-      {props.isSuper} <br/>
-      </div>
-   )
-
+   if (props.isSuper === "good") { 
+      return (
+         <div>
+         {props.selectedSuper} <br/>
+         {props.superAttributes.strength} <br/>
+         {props.superAttributes.intelligence}
+         </div>
+      )
+   } else  {
+      return (
+         "not a super!"
+         )
+   } 
 }
 
 export default SuperheroResults
