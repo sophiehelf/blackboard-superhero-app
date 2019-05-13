@@ -6,12 +6,12 @@ function SuperheroResults(props) {
       return (
          <div id="super-container">
          <span className="char-name">{props.selectedSuper}</span> <br/>
-         Intelligence: {props.superAttributes.intelligence} <br/>
-         Strength: {props.superAttributes.strength} <br/>
-         Speed: {props.superAttributes.speed} <br />
-         Durability: {props.superAttributes.durability} <br />
-         Power: {props.superAttributes.power} <br />
-         Combat: {props.superAttributes.combat}
+         Intelligence: <span className="data">{props.superAttributes.intelligence}</span> <br/>
+         Strength: <span className="data">{props.superAttributes.strength}</span> <br/>
+         Speed: <span className="data">{props.superAttributes.speed}</span> <br />
+         Durability: <span className="data">{props.superAttributes.durability}</span> <br />
+         Power: <span className="data">{props.superAttributes.power}</span> <br />
+         Combat: <span className="data">{props.superAttributes.combat}</span>
          </div>
       )
    } else  if (props.isSuper === 'bad'){

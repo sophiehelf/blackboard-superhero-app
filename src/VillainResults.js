@@ -6,12 +6,12 @@ function VillainResults(props) {
       return (
          <div id="villain-container">
          <span className="char-name">{props.selectedVillain}</span> <br/>
-         Intelligence: {props.villainAttributes.intelligence} <br/>
-         Strength: {props.villainAttributes.strength} <br/>
-         Speed: {props.villainAttributes.speed} <br />
-         Durability: {props.villainAttributes.durability} <br />
-         Power: {props.villainAttributes.power} <br />
-         Combat: {props.villainAttributes.combat}
+         Intelligence: <span className="data">{props.villainAttributes.intelligence}</span> <br/>
+         Strength: <span className="data">{props.villainAttributes.strength}</span> <br/>
+         Speed: <span className="data">{props.villainAttributes.speed}</span> <br />
+         Durability: <span className="data">{props.villainAttributes.durability}</span> <br />
+         Power: <span className="data">{props.villainAttributes.power}</span> <br />
+         Combat: <span className="data">{props.villainAttributes.combat}</span>
          </div>
       )
    } else  if (props.isVillain === 'good'){

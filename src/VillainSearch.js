@@ -42,13 +42,15 @@ class VillainSearch extends React.Component {
 
         return (
             <div>
+                <span>Search for a Villain</span>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>
                         <br />
-                        <input type="text" name="name" onBlur={this.handleBlur}/>
+                        <input type="text" name="name" className="input-box" onBlur={this.handleBlur}/>
                     </label>
                     <br />
-                    <input type="submit" value="Search" />
+                    <br />
+                    <input type="submit" value="Search" className="input-button"/>
                 </form>
 
                 <VillainResults 
