@@ -13,7 +13,7 @@ class VillainSearch extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Villain Component has mounted")
+        console.log("Villain Component has mounted") // just checking
     }
 
     handleBlur = (e) => {
@@ -30,7 +30,7 @@ class VillainSearch extends React.Component {
                 villainAttributes: jsonResponse.results[0].powerstats,
                 isVillain: jsonResponse.results[0].biography.alignment
             })
-        }).catch(error => {
+        }).catch(error => { // if search errors, say villian not in database
             this.setState({
                 isVillain: 'not in database'
             })

@@ -10,11 +10,11 @@ function SuperheroResults(props) {
          Strength: <span className="data">{props.superAttributes.strength}</span> <br/>
          Speed: <span className="data">{props.superAttributes.speed}</span> <br />
          Durability: <span className="data">{props.superAttributes.durability}</span> <br />
-         Power: <span className="data">{props.superAttributes.power}</span> <br />
+         Power: <span className="data">{props.superAttributes.power}</span><br />
          Combat: <span className="data">{props.superAttributes.combat}</span>
          </div>
       )
-   } else  if (props.isSuper === 'bad'){
+   } else if (props.isSuper === 'bad'){
       return (
          <span className="error-result">Not a Super</span>
          )
