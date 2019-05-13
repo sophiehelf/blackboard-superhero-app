@@ -5,9 +5,13 @@ function SuperheroResults(props) {
    if (props.isSuper === "good") { 
       return (
          <div>
-         {props.selectedSuper} <br/>
-         {props.superAttributes.strength} <br/>
-         {props.superAttributes.intelligence}
+         Name: {props.selectedSuper} <br/>
+         Intelligence: {props.superAttributes.intelligence} <br/>
+         Strength: {props.superAttributes.strength} <br/>
+         Speed: {props.superAttributes.speed} <br />
+         Durability: {props.superAttributes.durability} <br />
+         Power: {props.superAttributes.power} <br />
+         Combat: {props.superAttributes.combat}
          </div>
       )
    } else  if (props.isSuper === 'bad'){
