@@ -38,8 +38,6 @@ class VillainSearch extends React.Component {
     }
 
     render() {
-
-
         return (
             <div>
                 <span>Search for a Villain</span>
@@ -52,7 +50,6 @@ class VillainSearch extends React.Component {
                     <br />
                     <input type="submit" value="Search" className="input-button"/>
                 </form>
-
                 <br />
                 <VillainResults 
                     villainAttributes={this.state.villainAttributes}

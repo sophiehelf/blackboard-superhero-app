@@ -38,8 +38,6 @@ class SuperheroSearch extends React.Component {
     }
 
     render() {
-
-
         return (
             <div>
                 <span>Search for a Superhero</span>
@@ -52,14 +50,11 @@ class SuperheroSearch extends React.Component {
                     <br />
                     <input type="submit" value="Search" />
                 </form>
-
                 <br />
-
                 <SuperheroResults 
                 superAttributes={this.state.superAttributes}
                 selectedSuper={this.state.selectedSuper}
                 isSuper={this.state.isSuper}/>
-
             </div>
         )
     }
