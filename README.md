@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome to the Superhero App!
 
-## Available Scripts
+Created with love by Sophie Helf.
 
-In the project directory, you can run:
+## What is this?
 
-### `npm start`
+The Superhero App is an app that lets you compare the stats of superheroes and villains. Type in the name of a superhero or a villain to see their stats. 
 
-Runs the app in the development mode.<br>
+This project was coded in React.js. It was styled with Sass and Flexbox, and uses several Google fonts.
+
+### How to run it
+
+Navigate to the project folder (superheroes), then run `npm start`. 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Please be sure to install the CORS plugin on Chrome. Otherwise, the Superheroes API will be blocked. You will see this error in the console.
 
-### `npm test`
+### How it works
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was bootstrapped with create-react-app.
 
-### `npm run build`
+The app has two search bars, one for heroes and one for villains. Type in a name to see a hero or villain's stats.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once a name is submitted, the app makes a call via `fetch` to the Superheroes API, pulling in the hero's name, stats, and whether they're "good" or "bad". This is done via `setState`, which subsequently passes the data down to a static UI component.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The stats are then showed in the static compoment that double-checks to see if the character is a hero or villain, returning either "Not a Hero/Villain" if the character is in the database but on the opposite side, or "Not In Database" if the character's name cannot be found.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What could be different?
 
-### `npm run eject`
+The Superheroes API, though useful, was missing a couple of features that would have made the project's structure a little less complex. The data structure of the API did not include an array of all the characters, which would have made it easier to separate heroes from villains; I initially considered creating a drop-down list instead of a search function for the characters but it was difficult to extract the data in the way I would have needed to.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I considered using Redux but as there was very little data flow in the app it felt unnecessary. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What would I do if I had more time?
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I would certainly purchase a nice font. I love fonts.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I am curious about how the app could be optimized for mobile. The app would need to have a different layout for a phone's vertical view, but this could open up some complications – how much space would be needed between the two search bars for there to be room for results? Would a drop-down list for the search function work better (were it even possible to implement)? 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+----
