@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono|Libre+Barcode+128+Text|VT323");
 
+$container-font: 'Libre Barcode 128 Text', cursive;;
+$container-font-size: 50px;
+
 .App {
   text-align: center;
 }
@@ -21,13 +24,13 @@
 }
 
 #super-container {
-  font-family: 'Libre Barcode 128 Text', cursive;
-  font-size: 50px;
+  font-family: $container-font;
+  font-size: $container-font-size;
 }
 
 #villain-container {
-  font-family: 'Libre Barcode 128 Text', cursive;
-  font-size: 50px;
+  font-family: $container-font;
+  font-size: $container-font-size;
 }
 
 .input-box {
