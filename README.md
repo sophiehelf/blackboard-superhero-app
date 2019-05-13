@@ -23,7 +23,7 @@ The app has two search bars, one for heroes and one for villains. Type in a name
 
 Once a name is submitted, the app makes a call via `fetch` to the Superheroes API, pulling in the hero's name, stats, and whether they're "good" or "bad". This is done via `setState`, which subsequently passes the data down to a static UI component.
 
-The stats are then showed in the static compoment that double-checks to see if the character is a hero or villain, returning either "Not a Hero/Villain" if the character is in the database but on the opposite side, or "Not In Database" if the character's name cannot be found.
+The stats are then showed in the static compoment that double-checks to see if the character is a hero or villain, returning the name of the hero or villain, "Not a Hero/Villain" if the character is in the database but on the opposite side, or "Not In Database" if the character's name cannot be found.
 
 ### What could be different?
 
