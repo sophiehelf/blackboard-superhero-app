@@ -1,5 +1,5 @@
 import React from 'react'
-import SuperheroResults from './SuperheroResults.js'
+import SuperheroResults from '.Supers/SuperheroResults.js'
 
 class SuperheroSearch extends React.Component {
     constructor(props) {

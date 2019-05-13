@@ -1,5 +1,5 @@
 import React from 'react'
-import VillainResults from './VillainResults.js'
+import VillainResults from './Villains/VillainResults.js'
 
 class VillainSearch extends React.Component {
     constructor(props) {
