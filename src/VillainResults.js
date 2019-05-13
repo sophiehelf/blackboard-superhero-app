@@ -16,10 +16,10 @@ function VillainResults(props) {
       )
    } else  if (props.isVillain === 'good'){
       return (
-         "not a villain!!"
+         <span className="error-result">Not a Villain</span>
          )
    } else if (props.isVillain === "not in database"){
-      return "not in database!"
+      return <span className="error-result">Not in Database</span>
    } else if (props.isVillain === ''){
       return ""
    }

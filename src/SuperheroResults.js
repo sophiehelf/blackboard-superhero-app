@@ -16,10 +16,10 @@ function SuperheroResults(props) {
       )
    } else  if (props.isSuper === 'bad'){
       return (
-         "not a super!"
+         <span className="error-result">Not a Super</span>
          )
    } else if (props.isSuper === "not in database"){
-      return "not in database!"
+      return <span className="error-result">Not in Database</span>
    } else if (props.isSuper === ''){
       return ""
    }
