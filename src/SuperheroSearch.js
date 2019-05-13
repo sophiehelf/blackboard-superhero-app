@@ -47,6 +47,7 @@ class SuperheroSearch extends React.Component {
                         <br />
                         <input type="text" name="name" onBlur={this.handleBlur}/>
                     </label>
+                    <br />
                     <input type="submit" value="Search" />
                 </form>
 

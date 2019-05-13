@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.character-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#super-container {
+  color: blue;
+}
+
+#villain-container {
+  color: red;
+}

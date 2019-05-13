@@ -4,7 +4,7 @@ import VillainSearch from './VillainSearch.js'
 
 function CharacterContainer(props) {
     return (
-        <div>
+        <div className="character-container">
             <SuperheroSearch />
             <br />
             <br />
