@@ -31,7 +31,9 @@ class SuperheroSearch extends React.Component {
                 isSuper: jsonResponse.results[0].biography.alignment
             }, () => console.log(this.state.isSuper))
         }).catch(error => {
-            console.log("there has been an error :(")
+            this.setState({
+                isSuper: 'not in database'
+            })
         })
     }
 
