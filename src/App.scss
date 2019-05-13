@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono|Libre+Barcode+128+Text|VT323");
 
 
-$container-font: 'Space Mono', monospace;
-$container-font-size: 30px;
 $container-font-color: #00ce0a;
+
+@mixin container-font() {
+  font-family: 'Space Mono', monospace;
+  font-size: 30px;
+}
 
 @mixin char-name() {
   font-family: 'VT323', monospace;
@@ -19,10 +22,6 @@ $container-font-color: #00ce0a;
   background-color: black;
 }
 
-#title {
-  color: green;
-}
-
 .character-container {
   display: flex;
   flex-direction: row;
@@ -32,13 +31,12 @@ $container-font-color: #00ce0a;
   color: $container-font-color;
   
   .data {
-    color: red;
+    color: white;
   }
 }
 
 #super-container {
-  font-family: $container-font;
-  font-size: $container-font-size;
+  @include container-font();
   text-align: left;
   color: $container-font-color;
 
@@ -48,8 +46,7 @@ $container-font-color: #00ce0a;
 }
 
 #villain-container {
-  font-family: $container-font;
-  font-size: $container-font-size;
+  @include container-font();
   text-align: right;
 
   .char-name {
@@ -75,6 +72,6 @@ input[type=submit] {
 
 .error-result {
   color: red;
-  font-family: $container-font;
+  @include container-font();
   font-size: 20px;
 }

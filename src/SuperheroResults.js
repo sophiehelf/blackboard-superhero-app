@@ -16,7 +16,7 @@ function SuperheroResults(props) {
       )
    } else if (props.isSuper === 'bad'){
       return (
-         <span className="error-result">Not a Super</span>
+         <span className="error-result">Not a Superhero</span>
          )
    } else if (props.isSuper === "not in database"){
       return <span className="error-result">Not in Database</span>
