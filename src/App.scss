@@ -3,16 +3,24 @@
 
 $container-font: 'Space Mono', monospace;
 $container-font-size: 30px;
+$container-font-color: #00ce0a;
+
+@mixin char-name() {
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+  color: white;
+}
+
 
 .App {
   text-align: center;
   padding-top: 20px;
   height: 100vh;
-  background-color: #efefef;
+  background-color: black;
 }
 
 #title {
-  color: black;
+  color: green;
 }
 
 .character-container {
@@ -21,6 +29,7 @@ $container-font-size: 30px;
   justify-content: space-evenly;
   font-family: 'VT323', monospace;
   font-size: 40px;
+  color: $container-font-color;
   
   .data {
     color: red;
@@ -31,9 +40,10 @@ $container-font-size: 30px;
   font-family: $container-font;
   font-size: $container-font-size;
   text-align: left;
+  color: $container-font-color;
 
   .char-name {
-    color: blue;
+    @include char-name()
   }
 }
 
@@ -43,7 +53,7 @@ $container-font-size: 30px;
   text-align: right;
 
   .char-name {
-    color: red;
+    @include char-name()
   }
 }
 
@@ -52,12 +62,12 @@ $container-font-size: 30px;
   width: 300px;
   font-size: 28px;
   font-family: 'Space Mono', monospace;
-  border-color: black;
+  border-color: white;
   border-width: 2px;
 }
 
 input[type=submit] {
-  border-color: black;
+  border-color: white;
   border-width: 2px;
   font-size: 30px;
   font-family: 'VT323', monospace;
