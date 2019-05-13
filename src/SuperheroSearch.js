@@ -53,6 +53,8 @@ class SuperheroSearch extends React.Component {
                     <input type="submit" value="Search" />
                 </form>
 
+                <br />
+
                 <SuperheroResults 
                 superAttributes={this.state.superAttributes}
                 selectedSuper={this.state.selectedSuper}

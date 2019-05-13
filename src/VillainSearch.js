@@ -53,6 +53,7 @@ class VillainSearch extends React.Component {
                     <input type="submit" value="Search" className="input-button"/>
                 </form>
 
+                <br />
                 <VillainResults 
                     villainAttributes={this.state.villainAttributes}
                     selectedVillain={this.state.selectedVillain}
