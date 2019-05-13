@@ -29,7 +29,7 @@ class SuperheroSearch extends React.Component {
                 selectedSuper: jsonResponse.results[0].name,
                 superAttributes: jsonResponse.results[0].powerstats,
                 isSuper: jsonResponse.results[0].biography.alignment
-            }, () => console.log(this.state.isSuper))
+            })
         }).catch(error => {
             this.setState({
                 isSuper: 'not in database'
@@ -54,7 +54,8 @@ class SuperheroSearch extends React.Component {
                 <SuperheroResults 
                 superAttributes={this.state.superAttributes}
                 selectedSuper={this.state.selectedSuper}
-                isSuper={this.state.isSuper}/>
+                isSuper={this.state.isSuper}
+                />
             </div>
         )
     }

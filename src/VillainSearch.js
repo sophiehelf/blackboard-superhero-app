@@ -29,7 +29,7 @@ class VillainSearch extends React.Component {
                 selectedVillain: jsonResponse.results[0].name,
                 villainAttributes: jsonResponse.results[0].powerstats,
                 isVillain: jsonResponse.results[0].biography.alignment
-            }, () => console.log(this.state.isVillain))
+            })
         }).catch(error => {
             this.setState({
                 isVillain: 'not in database'
@@ -54,7 +54,8 @@ class VillainSearch extends React.Component {
                 <VillainResults 
                     villainAttributes={this.state.villainAttributes}
                     selectedVillain={this.state.selectedVillain}
-                    isVillain={this.state.isVillain}/>
+                    isVillain={this.state.isVillain}
+                />
             </div>
         )
     }
