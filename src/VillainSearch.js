@@ -1,5 +1,5 @@
 import React from 'react'
-import VillainResults from './Villains/VillainResults.js'
+import VillainResults from './VillainResults.js'
 
 class VillainSearch extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class VillainSearch extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Component has mounted")
+        console.log("Villain Component has mounted")
     }
 
     handleBlur = (e) => {
@@ -51,10 +51,9 @@ class VillainSearch extends React.Component {
                 </form>
 
                 <VillainResults 
-                villainAttributes={this.state.villainAttributes}
-                selectedVillain={this.state.selectedVillain}
-                isVillain={this.state.isVillain}/>
-
+                    villainAttributes={this.state.villainAttributes}
+                    selectedVillain={this.state.selectedVillain}
+                    isVillain={this.state.isVillain}/>
             </div>
         )
     }

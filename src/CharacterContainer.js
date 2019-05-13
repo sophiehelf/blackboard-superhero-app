@@ -1,6 +1,6 @@
 import React from 'react'
-import SuperheroSearch from './Supers/SuperheroSearch.js'
-import VillainSearch from './Villains/VillainSearch.js'
+import SuperheroSearch from './SuperheroSearch.js'
+import VillainSearch from './VillainSearch.js'
 
 function CharacterContainer(props) {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import SuperheroResults from '.Supers/SuperheroResults.js'
+import SuperheroResults from './SuperheroResults.js'
 
 class SuperheroSearch extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class SuperheroSearch extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Component has mounted")
+        console.log("Superhero Component has mounted")
     }
 
     handleBlur = (e) => {
