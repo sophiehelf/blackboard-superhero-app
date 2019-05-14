@@ -2,7 +2,7 @@
 
 Created with love by Sophie Helf.
 
-## What is this?
+### What is this?
 
 The Superhero App is an app that lets you compare the stats of superheroes and villains. Type in the name of a superhero or a villain to see their stats. 
 
@@ -21,9 +21,9 @@ This project was bootstrapped with create-react-app.
 
 The app has two search bars, one for heroes and one for villains. Type in a name to see a hero or villain's stats.
 
-Once a name is submitted, the app makes a call via `fetch` to the Superheroes API, pulling in the hero's name, stats, and whether they're "good" or "bad". This is done via `setState`, which subsequently passes the data down to a static UI component.
+Once a name is submitted, the app makes a call via `fetch` to the Superheroes API, pulling in the hero's name, stats, and whether they're "good" or "bad". This is done via `setState`, which subsequently passes the data down to a stateless UI component.
 
-The stats are then showed in the static compoment that double-checks to see if the character is a hero or villain, returning the name of the hero or villain, "Not a Hero/Villain" if the character is in the database but on the opposite side, or "Not In Database" if the character's name cannot be found.
+The stats are then showed in the stateless compoment that double-checks to see if the character is a hero or villain, returning the name of the hero or villain, "Not a Hero/Villain" if the character is in the database but on the opposite side, or "Not In Database" if the character's name cannot be found.
 
 ### What could be different?
 
@@ -35,6 +35,8 @@ I considered using Redux but as there was very little data flow in the app it fe
 
 I would certainly purchase a nice font. I love fonts.
 
-I am curious about how the app could be optimized for mobile. The app would need to have a different layout for a phone's vertical view, but this could open up some complications – how much space would be needed between the two search bars for there to be room for results? Would a drop-down list for the search function work better (were it even possible to implement)? 
+I am curious about how the app could be optimized for mobile. The app would need to have a different layout for a phone's vertical view, but this could open up some complications – how much space would be needed between the two search bars for there to be room for results? Would a drop-down list for the search function work better (were it even possible to implement)?
 
-----
+I would have liked to have the text to fade in once it shows up on the screen but did not have time to implement `react-fade` (which seemed like the best choice for fading in text as CSS is fussy with that sort of thing). 
+
+## Thank you for reading and enjoy!
