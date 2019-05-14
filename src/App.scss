@@ -37,7 +37,7 @@ $container-font-color: #00ce0a;
 
 #super-container {
   @include container-font();
-  text-align: left;
+  text-align: center;
   color: $container-font-color;
 
   .char-name {
@@ -47,7 +47,7 @@ $container-font-color: #00ce0a;
 
 #villain-container {
   @include container-font();
-  text-align: right;
+  text-align: center;
 
   .char-name {
     @include char-name()
